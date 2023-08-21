@@ -1,13 +1,13 @@
 
-## Despliegue 📦
+## Codigo Fuente c# 🐱‍💻
 
-Agrega notas adicionales sobre cómo hacer deploy.
+Agregar a tu visual Studio < 2021 como nuevo proyecto
 
 ## Construido con 🛠️
 
-* [NombreDelFramework](url) - El framework web usado
-* [NombreDelPaquete](url) - Manejador de dependencias
-* [NombreDeLaLibrería](url) - Usada para tal cosa
+* C# - Lenguaje de programacion Base principal
+* WPF - Desarrollo de interfaces Windows Presentation Foundation
+* Material Design In XAML
 
 ## Contribuyendo 🖇️
 
@@ -19,7 +19,7 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 ## Autores ✒️
 
-* **Tu Nombre** - *Trabajo Inicial* - [TuGitHub](url)
-* **Otro Nombre** - *Documentación* - [SuGitHub](url)
+* **Benjamin Castillo** - *Trabajo Inicial* - [TuGitHub](url)
+* **Jorge Mora** - *Programador señior* - [SuGitHub](url)
 
 Agradece a todos aquellos que participaron en el proyecto.
