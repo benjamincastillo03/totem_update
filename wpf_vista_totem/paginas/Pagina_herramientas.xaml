@@ -1,0 +1,247 @@
+﻿<Page
+    x:Class                         =   "wpf_vista_totem.paginas.Pagina_herramientas"
+    xmlns                           =   "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x                         =   "http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc                        =   "http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d                         =   "http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local                     =   "clr-namespace:wpf_vista_totem.paginas"
+    mc:Ignorable                    =   "d" 
+    Title                           =   "Pagina_herramientas"
+    xmlns:materialDesign            =   "http://materialdesigninxaml.net/winfx/xaml/themes"
+    TextElement.Foreground          =   "{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight          =   "Regular"
+    TextElement.FontSize            =   "13"
+    TextOptions.TextFormattingMode  =   "Ideal" 
+    TextOptions.TextRenderingMode   =   "Auto"        
+    FontFamily                      =   "{DynamicResource MaterialDesignFont}"
+    >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel 
+            Orientation     =   "Horizontal" 
+            Grid.Column     =   "0" 
+            Grid.Row        =   "0" 
+            Margin          =   "0,30,0,0" 
+            Grid.ColumnSpan =   "3">
+            <materialDesign:PackIcon 
+                Foreground          =   "{DynamicResource InformationColorBrush}"
+                Kind                =   "PlusCircle" 
+                Height              =   "90"
+                Width               =   "90"
+                VerticalAlignment   =   "Center"
+                HorizontalAlignment =   "Center"
+            />
+            <TextBlock
+                Foreground          =   "{DynamicResource InformationColorBrush}"
+                Style               =   "{StaticResource MaterialDesignHeadline5TextBlock}"
+                x:Name              =   "txt_mimac"
+                Margin              =   "0,0,0,0"
+                FontSize            =   "60"
+                Text                =   "null"/>
+        </StackPanel>
+
+        <GroupBox
+            Grid.Column                         =   "0" 
+            Grid.Row                            =   "1"
+            Header                              =   "Seleccion de voz - Windows"
+            Style                               =   "{StaticResource MaterialDesignGroupBox}"
+            Margin                              =   "10"
+            materialDesign:ColorZoneAssist.Mode =   "SecondaryDark"
+            >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox
+                    Name                                =   "comboBox_Voces"
+                    Grid.Column                         =   "0"
+                    Style                               =   "{StaticResource MaterialDesignFloatingHintComboBox}"
+                    Foreground                          =   "{DynamicResource InformationColorBrush}"
+                    materialDesign:HintAssist.Hint      =   "Voz disponible en sistema operativo"
+                    Padding                             =   "8"
+                    SelectionChanged                    =   "CambioVoces"
+                    >
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        
+        <GroupBox
+            Grid.Column                                 =   "1" 
+            Grid.Row                                    =   "1"
+            Header                                      =   "Servidores de Totem"
+            Style                                       =   "{StaticResource MaterialDesignGroupBox}"
+            Margin                                      =   "10"
+            materialDesign:ColorZoneAssist.Mode         =   "SecondaryDark">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox
+                    Name                                =   "Usodeltotem"
+                    Grid.Column                         =   "0"
+                    Style                               =   "{StaticResource MaterialDesignFloatingHintComboBox}"
+                    Foreground                          =   "{DynamicResource InformationColorBrush}"
+                    materialDesign:HintAssist.Hint      =   "Servidores disponibles"
+                    Padding                             =   "8"
+                    >
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+
+        <Button
+            Grid.Column     =   "0" 
+            Grid.Row        =   "2"
+            Padding         =   "10"
+            Margin          =   "10"
+            Style           =   "{StaticResource MaterialDesignRaisedAccentButton}"
+            materialDesign:ShadowAssist.ShadowAnimationDuration = "0:0:0" 
+            Click           =   "Button_Click2" 
+            Cursor          =   "Hand">
+            BUSQUEDA ACTUALIZACIÓN
+        </Button>
+
+        <Button
+            Grid.Column     =   "1" 
+            Grid.Row        =   "2"
+            Padding         =   "10"
+            Margin          =   "10"
+            Style           =   "{StaticResource MaterialDesignRaisedAccentButton}"
+            materialDesign:ShadowAssist.ShadowAnimationDuration = "0:0:0" 
+            Click           =   "get_anclar_inicio" 
+            Cursor          =   "Hand">
+            ANCLAR AL INICIO WINDOWS
+        </Button>
+
+        <Button
+            Grid.Column     =   "0" 
+            Grid.Row        =   "3"
+            Padding         =   "10"
+            Margin          =   "10"
+            Style           =   "{StaticResource MaterialDesignRaisedAccentButton}"
+            materialDesign:ShadowAssist.ShadowAnimationDuration="0:0:0" 
+            Click           =   "get_pabel_control" 
+            Cursor          =   "Hand">
+            PANEL DE CONTROL
+        </Button>
+
+        
+        
+        <Button
+            Grid.Column     =   "1" 
+            Grid.Row        =   "3"
+            Padding         =   "10"
+            Margin          =   "10"
+            Style           =   "{StaticResource MaterialDesignRaisedAccentButton}"
+            materialDesign:ShadowAssist.ShadowAnimationDuration="0:0:0" 
+            Click           =   "Teclado_Pantalla" 
+            Cursor          =   "Hand">
+            EXPLORAR ARCHIVOS
+        </Button>
+
+
+        <Button
+            Grid.Column     =   "0" 
+            Grid.Row        =   "4"
+            Padding         =   "10"
+            Margin          =   "10"
+            Style           =   "{StaticResource MaterialDesignRaisedAccentButton}"
+            materialDesign:ShadowAssist.ShadowAnimationDuration="0:0:0" 
+            Click           =   "Administrador_tareas" 
+            Cursor          =   "Hand">
+            ADMINISTRADOR DE TAREAS
+        </Button>
+
+        
+
+        <materialDesign:DialogHost Grid.Row="0" Grid.Column="0"  Grid.RowSpan="7" Grid.ColumnSpan="3"  x:Name="load_busqueda_nube" DialogTheme="Light" Opacity="0.1">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin      =   "16">
+                    <GroupBox
+                        Header                                      =   "Actualizaciones disponibles"
+                        Style                                       =   "{StaticResource MaterialDesignGroupBox}"
+                        Margin                                      =   "10"
+                        materialDesign:ColorZoneAssist.Mode         =   "SecondaryDark">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ComboBox
+                                Name                                =   "versiones_wpf"
+                                Grid.Column                         =   "0"
+                                Style                               =   "{StaticResource MaterialDesignFloatingHintComboBox}"
+                                Foreground                          =   "{DynamicResource InformationColorBrush}"
+                                materialDesign:HintAssist.Hint      =   "Actualizaciones Subidas"
+                                Padding                             =   "8"
+                            >   
+                            </ComboBox>
+                            <Button
+                                Grid.Column =   "1"
+                                Grid.Row    =   "0"
+                                Style       =   "{StaticResource MaterialDesignFloatingActionDarkButton}"
+                                ToolTip     =   "Descarga"
+                                Click       =   "gestion_Descarga" 
+                                IsEnabled   =   "{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                Cursor      =   "Hand">
+                                <materialDesign:PackIcon Kind="CloudDownloadOutline"/>
+                            </Button>
+                        </Grid>
+                    </GroupBox>
+                    <Button
+                        Style               =   "{StaticResource MaterialDesignFlatButton}"
+                        IsCancel            =   "True"
+                        Command             =   "{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        HorizontalAlignment =   "Center"
+                        Content             =   "CERRAR VENTANA ... "/>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+
+
+        <materialDesign:DialogHost Grid.Row="0" Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="3"  x:Name="dialogo_load" DialogTheme="Light" Opacity="0.1">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin                  =   "16">
+                    <ProgressBar
+                        Style               =   "{StaticResource MaterialDesignCircularProgressBar}"
+                        HorizontalAlignment =   "Center"
+                        Margin              =   "16"
+                        IsIndeterminate     =   "True"
+                        Value               =   "0" />
+                    <Button
+                        Style               =   "{StaticResource MaterialDesignFlatButton}"
+                        IsCancel            =   "True"
+                        Command             =   "{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        HorizontalAlignment =   "Center"
+                        Content             =   "CARGANDO ACTUALIZACIONES ... "/>
+                    <ProgressBar
+                        Height              =   "10"
+                        IsIndeterminate     =   "True" />
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        
+        
+        
+
+    </Grid>
+</Page>

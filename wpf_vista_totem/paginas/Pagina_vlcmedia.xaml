@@ -1,0 +1,83 @@
+﻿<Page 
+    x:Class                         =   "wpf_vista_totem.paginas.Pagina_vlcmedia"
+    xmlns                           =   "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x                         =   "http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc                        =   "http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d                         =   "http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local                     =   "clr-namespace:wpf_vista_totem.paginas"
+    mc:Ignorable                    =   "d" 
+    Title                           =   "Pagina_vlcmedia"
+      
+    TextElement.Foreground          =   "{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight          =   "Regular"
+    TextElement.FontSize            =   "13"
+    TextOptions.TextFormattingMode  =   "Ideal" 
+    TextOptions.TextRenderingMode   =   "Auto"        
+    FontFamily                      =   "{DynamicResource MaterialDesignFont}"
+    xmlns:wpf                       =   "clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <StackPanel Grid.Row="0">
+            <TextBlock
+                Grid.Row        =   "2"
+                Grid.Column     =   "1"
+                Name            =   "txt_ventanilla"
+                Foreground      =   "{DynamicResource InformationColorBrush}"
+                Margin          =   "0,0,0,0"
+                FontSize        =   "100"
+                Text            =   "Tv"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="600" />
+                </Grid.RowDefinitions>
+                <wpf:VideoView
+                    x:Name="videoView"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                   />
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click_1">Fiesta Mix</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click_2">Tnt sport</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">El chavo</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click_3">Dragon ball</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Dragon_Ball">Dragon ball z</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Malcom_TV">Malcom</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" Click="teoriaDelbigbang">Big Bang</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="0" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center" Click="tvn">NARUTO</Button>
+                    <Button Margin="0,15,10,0" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Stop_class" Cursor="Hand">Stop</Button>
+            </Grid>
+    </StackPanel>
+    </Grid>
+</Page>

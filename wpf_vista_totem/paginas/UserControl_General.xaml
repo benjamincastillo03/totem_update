@@ -1,0 +1,177 @@
+﻿<UserControl 
+    x:Class                         =   "TOTEM_FARMACIA.paginas.UserControl_General"
+    xmlns                           =   "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x                         =   "http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc                        =   "http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d                         =   "http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local                     =   "clr-namespace:TOTEM_FARMACIA.paginas"
+    mc:Ignorable                    =   "d" 
+             
+    d:DesignHeight                  =   "1920" 
+    d:DesignWidth                   =   "1080"
+    Height                          =   "Auto" 
+    Width                           =   "Auto"
+    xmlns:materialDesign            =   "http://materialdesigninxaml.net/winfx/xaml/themes"
+    TextElement.Foreground          =   "{DynamicResource MaterialDesignBody}"
+    FontFamily                      =   "{DynamicResource MaterialDesignFont}"
+    TextElement.FontWeight          =   "Regular"
+    TextElement.FontSize            =   "13"
+    TextOptions.TextFormattingMode  =   "Ideal" 
+    TextOptions.TextRenderingMode   =   "Auto"
+    >
+    <Grid>
+        <StackPanel 
+            x:Name      =   "ind_publico_general" 
+            Grid.Row    =   "0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Column = "1" Grid.Row = "0" Margin="0,30,0,0">
+                    <materialDesign:PackIcon 
+                        Foreground          =   "{DynamicResource InformationColorBrush}"
+                        Kind                =   "HospitalBox" 
+                        Height              =   "90"
+                        Width               =   "90"
+                        VerticalAlignment   =   "Center"
+                        HorizontalAlignment =   "Center"
+                    />
+                    <TextBlock
+                        Foreground          =   "{DynamicResource InformationColorBrush}"
+                        Style               =   "{StaticResource MaterialDesignHeadline5TextBlock}"
+                        Margin              =   "0,0,0,0"
+                        FontSize            =   "90"
+                        Text                =   "FARMACIA"/>
+                </StackPanel>
+
+                <TextBlock
+                    Foreground              =   "{DynamicResource InformationColorBrush}"
+                    Style                   =   "{StaticResource MaterialDesignHeadline5TextBlock}"
+                    Grid.Column             =   "1"
+                    Grid.Row                =   "1"
+                    Margin                  =   "90,0,0,0"
+                    FontSize                =   "90"
+                    Text                    =   "ATENCIÓN ABIERTA"/>
+
+                <TextBlock
+                    Foreground              =   "{DynamicResource PrimaryHueLightBrush}"
+                    Grid.Column             =   "1"
+                    Grid.Row                =   "2"
+                    Margin                  =   "95,0,0,100"
+                    Style                   =   "{StaticResource MaterialDesignHeadline4TextBlock}"
+                    Text                    =   "TIPO PACIENTE - PÚBLICO GENERAL"/>
+
+
+                <StackPanel Orientation="Horizontal" Grid.Column = "1" Grid.Row = "3" Margin="0,0,0,30">
+                    <materialDesign:PackIcon 
+                        Foreground          =   "{DynamicResource InformationColorBrush}"
+                        Kind                =   "Numeric1Box" 
+                        Height              =   "90"
+                        Width               =   "90"
+                        VerticalAlignment   =   "Center"
+                        HorizontalAlignment =   "Center"
+                    />
+                    <TextBlock
+                        Foreground          =   "{DynamicResource InformationColorBrush}"
+                        Style               =   "{StaticResource MaterialDesignHeadline5TextBlock}"
+                        Margin              =   "0,0,0,0"
+                        FontSize            =   "70"
+                        Text                =   "TICKET POR PERSONA"/>
+                </StackPanel>
+
+
+                <Button 
+                    Grid.Column                     =   "1"
+                    Grid.Row                        =   "4" 
+                    Width                           =   "830" 
+                    Height                          =   "Auto"
+                    MinHeight                       =   "500"
+                    Margin                          =   "5"
+                    HorizontalContentAlignment      =   "Center" 
+                    VerticalContentAlignment        =   "Center"
+                    Style                           =   "{StaticResource MaterialDesignOutlinedLightButton}"
+                    IsEnabled                       =   "{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                    Click                           =   "Print_ticket_PublicoGeneral"
+                    >
+                    <StackPanel Orientation     =   "Horizontal">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <materialDesign:PackIcon 
+                                Grid.Row            =   "1" 
+                                Kind                =   "TicketAccount"  
+                                Height              =   "150"
+                                Width               =   "150"
+                                VerticalAlignment   =   "Center"
+                                HorizontalAlignment =   "Center"
+                            />
+                            <TextBlock
+                                Grid.Row            =   "2" 
+                                FontSize            =   "70"
+                                Text                =   "IMPRIMIR TICKET" 
+                                Style               =   "{StaticResource MaterialDesignHeadline3TextBlock}"/>
+                        </Grid>
+                    </StackPanel>
+                </Button>
+
+                <Button 
+                    x:Name                          =   "btn_volver_inicio" 
+                    Grid.Column                     =   "1"
+                    Grid.Row                        =   "5" 
+                    Width                           =   "830" 
+                    Height                          =   "Auto"
+                    MinHeight                       =   "450"
+                    Margin                          =   "5"
+                    HorizontalContentAlignment      =   "Center" 
+                    VerticalContentAlignment        =   "Center"
+                    Style                           =   "{StaticResource MaterialDesignOutlinedLightButton}"
+                    Click                           =   "btn_vuelve_inicio" Cursor="Hand"
+                    >
+                    <StackPanel Orientation="Horizontal">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <materialDesign:PackIcon 
+                                Grid.Row            =   "1" 
+                                Kind                =   "KeyboardBackspace"  
+                                Height              =   "150"
+                                Width               =   "150"
+                                VerticalAlignment   =   "Center"
+                                HorizontalAlignment =   "Center"
+                                />
+                            <TextBlock 
+                                Grid.Row            =   "2" 
+                                FontSize            =   "70"    
+                                Text                =   "PAGINA INICIO" 
+                                VerticalAlignment   =   "Center"
+                                HorizontalAlignment =   "Center"
+                                Style               =   "{StaticResource MaterialDesignHeadline3TextBlock}"
+                                />
+                        </Grid>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

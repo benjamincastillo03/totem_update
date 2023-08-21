@@ -1,0 +1,251 @@
+﻿<Window 
+    Title                           =   "SOLUCIONES - ARAUCANIA NORTE"
+    x:Name                          =   "ws_ventana_principal_totem" 
+    x:Class                         =   "wpf_vista_totem.MainWindow"
+    xmlns                           =   "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x                         =   "http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d                         =   "http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc                        =   "http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local                     =   "clr-namespace:wpf_vista_totem"
+    mc:Ignorable                    =   "d"
+    Height                          =   "Auto"
+    WindowState                     =   "Maximized"
+    WindowStyle                     =   "None"
+    xmlns:materialDesign            =   "http://materialdesigninxaml.net/winfx/xaml/themes"
+    TextElement.Foreground          =   "{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight          =   "Light"
+    TextElement.FontSize            =   "14"
+    TextOptions.TextFormattingMode  =   "Ideal" 
+    TextOptions.TextRenderingMode   =   "Auto"        
+    FontFamily                      =   "{DynamicResource MaterialDesignFont}"
+    Unloaded                        =   "ws_ventana_principal_totem_Unloaded"
+    Loaded                          =   "Window_Loaded"
+    >
+    <!--
+    Topmost                         =   "True"
+    -->
+    <Grid VerticalAlignment="Stretch" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <StackPanel Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image 
+                    x:Name      =   "imageControl" 
+                    Margin      =   "10" 
+                    Grid.Column =   "0" 
+                    Grid.Row    =   "0"
+                    Height      =   "160" 
+                    Width       =   "600"/>
+            </Grid>
+        </StackPanel>
+        <!-- Body -->
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                </Grid.RowDefinitions>
+                <!--
+                <ScrollViewer 
+                    Grid.Row                    =   "0"  
+                    Grid.Column                 =   "0" 
+                    Height                      =   "800"
+                    VerticalScrollBarVisibility =   "Visible"
+                    CanContentScroll            =   "True"
+                    >
+                    <Frame 
+                        Name                                        =   "frame_pagina_inicio" 
+                        NavigationUIVisibility                      =   "Hidden"
+                        ScrollViewer.VerticalScrollBarVisibility    =   "Visible" 
+                        ScrollViewer.CanContentScroll               =   "True" 
+                        ></Frame>
+                </ScrollViewer>
+                -->
+                <Frame 
+                    Grid.Column                 =   "0" 
+                    Grid.Row                    =   "0"
+                    Width                       =   "Auto"
+                    Height                      =   "Auto"
+                    Name                        =   "frame_pagina_inicio" 
+                    NavigationUIVisibility      =   "Hidden"></Frame>
+            </Grid>
+        </StackPanel>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <materialDesign:ColorZone
+                        Grid.Column     =   "0"
+                        Foreground      =   "{DynamicResource PrimaryHueLightBrush}"
+                        Mode            =   "Inverted"
+                        Padding         =   "16">
+                    <DockPanel>
+                        <materialDesign:PopupBox
+                            Name              =   "btn_herramientas_totem"
+                            DockPanel.Dock    =   "Left"
+                            PlacementMode     =   "BottomAndAlignRightEdges"
+                            >
+                            <ListBox x:Name="myListBox"></ListBox>
+                        </materialDesign:PopupBox>
+                        <StackPanel Orientation="Horizontal">
+                            <Image 
+                                x:Name              =   "imageControl2"
+                                HorizontalAlignment =   "Center"
+                                VerticalAlignment   =   "Center"
+                                Height              =   "25" 
+                                Width               =   "120"/>
+                        </StackPanel>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+
+                <TextBlock 
+                    x:Name                  =   "mi_tiempo"
+                    Margin                  =   "10,0,10,0"
+                    Grid.Column             =   "1"
+                    Foreground              =   "{DynamicResource InformationColorBrush}"
+                    Style                   =   "{StaticResource MaterialDesignHeadline3TextBlock}"
+                    VerticalAlignment       =   "Center"
+                    HorizontalAlignment     =   "Right"
+                    Text                    =   "HH:MM:SS"/>
+                <Button
+                    x:Name                  =   "btn_EstadoConexion"
+                    Grid.Column             =   "2"
+                    Foreground              =   "{DynamicResource MaterialDesignShadowBrush}"
+                    Style                   =   "{StaticResource MaterialDesignToolButton}"
+                    ToolTip                 =   "Estado de socket.io"
+                    IsEnabled               =   "{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Cursor="Hand">
+                    <materialDesign:PackIcon 
+                        Height              =   "25"
+                        Width               =   "50"    
+                        Kind                =   "Server"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+        <materialDesign:DialogHost Grid.Row="0" Grid.RowSpan="3" x:Name="load_pide_pass" DialogTheme="Light" Opacity="0.8">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin      =   "16">
+                    <StackPanel
+                        Orientation         =   "Vertical">
+                        <PasswordBox
+                            Margin          =   "0,10,0,10"
+                            x:Name          =   "txt_pass"
+                            materialDesign:HintAssist.Hint              =   "Password (Administrador)"
+                            materialDesign:PasswordBoxAssist.Password   =   "{Binding Path=Password2Validated, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}" />
+                    </StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Content="1" Margin="5" FontSize="16" Click="Button_Click"/>
+                            <Button Content="2" Margin="5" FontSize="16" Click="Button_Click"/>
+                            <Button Content="3" Margin="5" FontSize="16" Click="Button_Click"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Content="4" Margin="5" FontSize="16" Click="Button_Click"/>
+                            <Button Content="5" Margin="5" FontSize="16" Click="Button_Click"/>
+                            <Button Content="6" Margin="5" FontSize="16" Click="Button_Click"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Content="7" Margin="5" FontSize="16" Click="Button_Click"/>
+                            <Button Content="8" Margin="5" FontSize="16" Click="Button_Click"/>
+                            <Button Content="9" Margin="5" FontSize="16" Click="Button_Click"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Content="0" Margin="5" FontSize="16" Click="Button_Click"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Content="OK" Margin="5" FontSize="16" Click="Confirma_Desbloqueo" />
+                            <Button Content="C"  Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Margin="5" FontSize="16" />
+                            <Button Content="B" Margin="5" FontSize="16" Click="DeleteButton_Click" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+        <materialDesign:DialogHost Grid.Row="0" Grid.RowSpan="3" x:Name="info_sin_papel" DialogTheme="Light" Opacity="0.8">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin="16">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column = "0" Grid.Row = "0" Margin="30">
+                            <materialDesign:PackIcon 
+                                Foreground          =   "{DynamicResource ErrorColorBrush}"
+                                Kind                =   "PrinterAlert" 
+                                Height              =   "90"
+                                Width               =   "90"
+                                VerticalAlignment   =   "Center"
+                                HorizontalAlignment =   "Center"
+                                />
+                            <TextBlock
+                                Foreground          =   "{DynamicResource ErrorColorBrush}"
+                                Style               =   "{StaticResource MaterialDesignHeadline4TextBlock}"
+                                Margin              =   "0,0,0,0"
+                                FontSize            =   "90"
+                                Text                =   " TOTEM SIN PAPEL"/>
+                        </StackPanel>
+
+                        <TextBlock
+                            Foreground              =   "{DynamicResource ErrorColorBrush}"
+                            Grid.Column             =   "0"
+                            Grid.Row                =   "1"
+                            Margin                  =   "30,-25,0,0"
+                            Style                   =   "{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text                    =   " - DIRÍJASE AL PRÓXIMO TÓTEM PARA SACAR NUMERO "/>
+                        <TextBlock
+                            Foreground              =   "{DynamicResource ErrorColorBrush}"
+                            Grid.Column             =   "0"
+                            Grid.Row                =   "2"
+                            Margin                  =   "30,0,0,0"
+                            Style                   =   "{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text                    =   " - SI EL PROBLEMA PERSISTE HABLAR EN VENTANILLA"/>
+                        <Button
+                            Grid.Column             =   "1" 
+                            Grid.Row                =   "3" 
+                            Foreground              =   "{DynamicResource ErrorColorBrush}"
+                            Style                   =   "{StaticResource MaterialDesignFlatButton}"
+                            Width                   =   "180"
+                            Content                 =   " OK "
+                            Command                 =   "{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                            IsEnabled               =   "{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+                    </Grid>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        
+    </Grid>
+</Window>

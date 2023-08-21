@@ -1,0 +1,163 @@
+﻿<Page
+    x:Class                         =   "wpf_vista_totem.paginas.inicio_fila_farmacia"
+    xmlns                           =   "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x                         =   "http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc                        =   "http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d                         =   "http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local                     =   "clr-namespace:wpf_vista_totem.paginas"
+    d:DesignWidth                   =   "1080"
+    Height                          =   "1950"
+    mc:Ignorable                    =   "d" 
+    Title                           =   "inicio_fila_farmacia"
+    xmlns:materialDesign            =   "http://materialdesigninxaml.net/winfx/xaml/themes"
+    TextElement.Foreground          =   "{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight          =   "Regular"
+    TextElement.FontSize            =   "13"
+    TextOptions.TextFormattingMode  =   "Ideal" 
+    TextOptions.TextRenderingMode   =   "Auto"        
+    FontFamily                      =   "{DynamicResource MaterialDesignFont}"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel 
+            x:Name      = "sp_control_ususario"
+            Grid.Row    = "0">
+            <Grid x:Name="gridContainer"></Grid>
+        </StackPanel>
+
+        <materialDesign:DialogHost Grid.Row="0" Grid.RowSpan="2" x:Name="load_carga_inicio" DialogTheme="Light" Opacity="0.8">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin                  =   "16">
+                    <ProgressBar
+                        Style               =   "{StaticResource MaterialDesignCircularProgressBar}"
+                        HorizontalAlignment =   "Center"
+                        Margin              =   "16"
+                        IsIndeterminate     =   "True"
+                        Value               =   "0" />
+                    <Button
+                        Style               =   "{StaticResource MaterialDesignFlatButton}"
+                        IsCancel            =   "True"
+                        Command             =   "{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        CommandParameter    =   "Sample2Cancel"
+                        HorizontalAlignment =   "Center"
+                        Content             =   " CARGANDO INICIO DE FILA VIRUAL FARMACIA CENTRAL... " />
+                    <ProgressBar
+                        Height              =   "10"
+                        IsIndeterminate     =   "True" />
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+        <materialDesign:DialogHost  Grid.Row="0" Grid.RowSpan="2" x:Name="load_transicion_page" DialogTheme="Light" Opacity="1">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin                  =   "16">
+                    <ProgressBar
+                        Style               =   "{StaticResource MaterialDesignCircularProgressBar}"
+                        HorizontalAlignment =   "Center"
+                        Margin              =   "16"
+                        IsIndeterminate     =   "True"
+                        Value               =   "0" />
+                    <Button
+                        Style               =   "{StaticResource MaterialDesignFlatButton}"
+                        IsCancel            =   "True"
+                        Command             =   "{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        HorizontalAlignment =   "Center"
+                        Content             =   "CARGANDO PAGINA ... "/>
+                    <ProgressBar
+                        Height              =   "10"
+                        IsIndeterminate     =   "True" />
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+        <materialDesign:DialogHost Grid.Row="0" Grid.RowSpan="4" x:Name="load_imprimiendo_ticket" DialogTheme="Light" Opacity="0.1">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin      =   "16">
+                    <ProgressBar
+                        Style               =   "{StaticResource MaterialDesignCircularProgressBar}"
+                        HorizontalAlignment =   "Center"
+                        Margin              =   "16"
+                        IsIndeterminate     =   "True"
+                        Value               =   "0" />
+                    <Button
+                        Style               =   "{StaticResource MaterialDesignFlatButton}"
+                        IsCancel            =   "True"
+                        Command             =   "{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        HorizontalAlignment =   "Center"
+                        Content             =   "IMPRIMIENDO TICKET ... "/>
+                    <ProgressBar
+                        Height              =   "10"
+                        IsIndeterminate     =   "True" />
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+
+        <materialDesign:DialogHost Grid.Row="0" Grid.RowSpan="4" x:Name="info_sin_papel2" DialogTheme="Light" Opacity="0.8">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel
+                    Margin="16">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column = "0" Grid.Row = "0" Margin="30">
+                            <materialDesign:PackIcon 
+                                Foreground          =   "{DynamicResource ErrorColorBrush}"
+                                Kind                =   "PrinterAlert" 
+                                Height              =   "90"
+                                Width               =   "90"
+                                VerticalAlignment   =   "Center"
+                                HorizontalAlignment =   "Center"
+                                />
+                            <TextBlock
+                                Foreground          =   "{DynamicResource ErrorColorBrush}"
+                                Style               =   "{StaticResource MaterialDesignHeadline4TextBlock}"
+                                Margin              =   "0,0,0,0"
+                                FontSize            =   "90"
+                                Text                =   " TOTEM SIN PAPEL"/>
+                        </StackPanel>
+
+                        <TextBlock
+                            Foreground      =   "{DynamicResource ErrorColorBrush}"
+                            Grid.Column     =   "0"
+                            Grid.Row        =   "1"
+                            Margin          =   "30,-25,0,0"
+                            Style           =   "{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text            =   " - DIRÍJASE AL PRÓXIMO TÓTEM PARA SACAR NUMERO "/>
+
+                        <TextBlock
+                            Foreground      =   "{DynamicResource ErrorColorBrush}"
+                            Grid.Column     =   "0"
+                            Grid.Row        =   "2"
+                            Margin          =   "30,0,0,0"
+                            Style           =   "{StaticResource MaterialDesignHeadline4TextBlock}"
+                            Text            =   " - SI EL PROBLEMA PERSISTE HABLAR EN VENTANILLA"/>
+                        
+                        <Button
+                            Grid.Column     =   "1" 
+                            Grid.Row        =   "3" 
+                            Foreground      =   "{DynamicResource ErrorColorBrush}"
+                            Style           =   "{StaticResource MaterialDesignFlatButton}"
+                            Width           =   "180"
+                            Content         =   " OK "
+                            Command     =   "{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                            IsEnabled   =   "{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+                    </Grid>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        
+    </Grid>
+</Page>
