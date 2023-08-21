@@ -63,7 +63,7 @@ Valoramos y agradecemos tu contribución a este proyecto. Juntos, trabajamos par
 
 ---
 
-Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con [NOMBRE DEL LÍDER O PUNTO DE CONTACTO] en [EMAIL o MÉTODO DE CONTACTO].
+Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con benjamin.castillo@araucanianorte.cl 
 
 ## Licencia 📄
 
@@ -74,7 +74,7 @@ Este proyecto está bajo la Licencia correspondiente a la política gubernamenta
 
 ## Autores ✒️
 
-* **Benjamin Castillo** - *Trabajo Inicial* - [Mail](benjamin.castillo@araucanianorte.cl)
+* **Benjamin Castillo** - *Trabajo Inicial* - 
 
 * **Jorge Mora** - *Programador señior* 
 
