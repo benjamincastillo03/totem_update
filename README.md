@@ -1,5 +1,5 @@
 
-## Codigo Fuente c# 🐱‍💻
+## Proyecto c# para e-SISSAN - Codigo Fuente c# 🐱‍💻
 
 Agregar a tu visual Studio < 2021 como nuevo proyecto
 
@@ -7,9 +7,12 @@ Agregar a tu visual Studio < 2021 como nuevo proyecto
 
 ## Construido con 🛠️
 
-* C# - Lenguaje de programacion Base principal
-* WPF - Desarrollo de interfaces Windows Presentation Foundation
-* Material Design In XAML, colores y iconos
+* C# - Lenguaje de programacion Base principal.
+* WPF - Desarrollo de interfaces Windows Presentation Foundation.
+* [materialdesigninxaml](http://materialdesigninxaml.net/home
+/) - Material Design In XAML, colores y iconos
+
+
 
 # Contribuyendo a TOTEMS - HOSPITAL ANGOL - SSAN
 
