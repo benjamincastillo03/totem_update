@@ -9,10 +9,7 @@ Agregar a tu visual Studio < 2021 como nuevo proyecto
 
 * C# - Lenguaje de programacion Base principal.
 * WPF - Desarrollo de interfaces Windows Presentation Foundation.
-* [materialdesigninxaml](http://materialdesigninxaml.net/home
-/) - Material Design In XAML, colores y iconos
-
-
+* [materialdesigninxaml](http://materialdesigninxaml.net/home) - Material Design In XAML, colores y iconos
 
 # Contribuyendo a TOTEMS - HOSPITAL ANGOL - SSAN
 
