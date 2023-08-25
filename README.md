@@ -3,6 +3,8 @@
 
 Agregar a tu visual Studio < 2021 como nuevo proyecto
 
+* [Servidor local Docker](https://github.com/benjamincastillo03/docker_local_server.git/) - Servidor localhost para el proyecto
+
 ## Construido con 🛠️
 
 * C# - Lenguaje de programacion Base principal
@@ -77,6 +79,3 @@ Este proyecto está bajo la Licencia correspondiente a la política gubernamenta
 * **Benjamin Castillo** - *Trabajo Inicial* - 
 
 * **Jorge Mora** - *Programador señior* 
-
-
-Agradece a todos aquellos que participaron en el proyecto.
