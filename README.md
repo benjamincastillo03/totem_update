@@ -5,15 +5,17 @@ Agregar a tu visual Studio < 2021 como nuevo proyecto
 
 * [Servidor local Docker](https://github.com/benjamincastillo03/docker_local_server.git/) - Servidor localhost para el proyecto
 
-## Construido con 🛠️
+## Construido como complemento a e-SISSAN 🛠️
 
 * C# - Lenguaje de programacion Base principal.
 * WPF - Desarrollo de interfaces Windows Presentation Foundation.
 * [materialdesigninxaml](http://materialdesigninxaml.net/home) - Material Design In XAML, colores y iconos
+* 🖨️ Soporte impresora BK-T680
+* Alarmas en 🐍 - 🕸️ - 🐘
 
 # Contribuyendo a TOTEMS - HOSPITAL ANGOL - SSAN
 
-Bienvenido al proyecto. Este documento está diseñado específicamente para guiar a los programadores del del serctor publico, en particular a aquellos que forman parte de Araea informatica. Hopital angol, en el proceso de contribución a este proyecto.
+Bienvenido al proyecto de hospital angol. Este documento está diseñado específicamente para guiar a los programadores que trabaje para hospital angol, en particular a aquellos que forman parte de Araea informatica. Hopital angol, en el proceso de contribución a este proyecto.
 
 ## Introducción
 
