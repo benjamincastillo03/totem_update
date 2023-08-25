@@ -11,11 +11,10 @@ Agregar a tu visual Studio < 2021 como nuevo proyecto
 * WPF - Desarrollo de interfaces Windows Presentation Foundation.
 * [materialdesigninxaml](http://materialdesigninxaml.net/home) - Material Design In XAML, colores y iconos
 * 🖨️ Soporte impresora BK-T680
-* Alarmas en 🐍 - 🕸️ - 🐘
 
 # Contribuyendo a TOTEMS - HOSPITAL ANGOL - SSAN
 
-Bienvenido al proyecto de hospital angol. Este documento está diseñado específicamente para guiar a los programadores que trabaje para hospital angol, en particular a aquellos que forman parte de Araea informatica. Hopital angol, en el proceso de contribución a este proyecto.
+Bienvenido al proyecto de hospital Mauricio Heyermann. Este documento está diseñado específicamente para guiar a los programadores que trabaje para hospital angol, en particular a aquellos que forman parte de Araea informatica. Hopital angol, en el proceso de contribución a este proyecto.
 
 ## Introducción
 
@@ -27,7 +26,7 @@ Mejora de nuestras herramientas y servicios. Tu experiencia y conocimientos son 
 
 Como programadores, es esencial que mantengamos un estándar profesional y respetuoso en todas nuestras interacciones. Por favor, consulta y sigue nuestro.
 
-## Antes de Empezar
+## Antes de Empezar 🎨💻
 
 - Familiarízate con la arquitectura y tecnologías utilizadas en este proyecto. 
 - Si tienes dudas o necesitas orientación, no dudes en contactar al equipo de liderazgo técnico de hospital angol o SSAN.
@@ -35,7 +34,7 @@ Como programadores, es esencial que mantengamos un estándar profesional y respe
 
 ## Cómo Contribuir
 
-### Reportar Problemas o Bugs
+### Reportar Problemas o Bugs 🐘
 
 Si encuentras un error o problema, por favor crea un issue detallado en nuestro tracker. Asegúrate de incluir:
 
