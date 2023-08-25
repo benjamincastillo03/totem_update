@@ -17,7 +17,9 @@ Bienvenido al proyecto. Este documento está diseñado específicamente para gui
 
 ## Introducción
 
-Gracias por tu compromiso con el desarrollo y mejora de nuestras herramientas y servicios. Tu experiencia y conocimientos son vitales para lograr un impacto positivo en la comunidad.
+Plataforma orientada para programadores e-SISSAN. conexion con paginas y base de datos de codeneiter 3 
+Mejora de nuestras herramientas y servicios. Tu experiencia y conocimientos son vitales para lograr un impacto positivo en la comunidad.
+
 
 ## Código de Conducta
 
@@ -49,6 +51,8 @@ Nos encantaría escuchar tus ideas para mejorar el proyecto. Crea un issue descr
 Si deseas contribuir con código:
 ( Tienes que agregar a un equipo local archivo docker y docker compose) 
 
+Aun no esta listo: 
+
 1. Haz un fork del repositorio.
 2. Crea una rama con un nombre descriptivo.
 3. Realiza tus cambios y asegúrate de seguir las pautas de estilo y prácticas recomendadas por Araucanamente.cl.
@@ -75,7 +79,5 @@ Este proyecto está bajo la Licencia correspondiente a la política gubernamenta
 
 
 ## Autores ✒️
-
 * **Benjamin Castillo** - *Trabajo Inicial* - 
-
 * **Jorge Mora** - *Programador señior* 
